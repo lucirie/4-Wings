@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta type="viewport" content="initial-scale=1.0, width=device-width">
+        <title>Hand Detection AI</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> <!-- Load TensorFlow.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script> <!-- Load Mediapip.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+        <script defer src="innovation.js"></script>
+        <link rel="stylesheet" href="innovation.css">
+    </head>
+    <body>
+        <h1>Sign Language Detection</h1>
+        <video id="webcam" autoplay playsinline></video> <!-- Webcam feed -->
+        <div id="prediction"></div> <!-- Show prediction here -->
+    </body>
+</html>
