@@ -1,35 +1,24 @@
 .petal {
     display: inline-block;
-    background-color: black;
+    animation: pulse 7s infinite ease-in-out;
+    background: linear-gradient(45deg, #1A0E21, #200A16, #0A1E1F, #0B1A17);
+    background-size: 500% 500%;
+    animation: wave 15s infinite ease-in-out;
     border: 2px, solid gold;
     width: 100px;
     height: 150px;
     border-radius: 77% 23% 70% 30% / 100% 30% 70% 0% ;
-    color: black;
+    color: rgba(0, 0, 0, 0);
     cursor: pointer;
     margin: auto;
+    transition: transform 0.5s ease-out;
+    animation: floating 15s ease-in-out infinite;
 }
 
 .petal:hover {
-    background-color: rgb(255, 215, 0);
-    color: black;
-    width: 150px;
-    height: 200px;
-    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+    /* Need to add some effects and fonts. */
+    color: rgb(153, 116, 21);
 }
-
-.petal:hover::before, .petal:hover::after {
-    background-color: black;
-    color: black;
-    width: 100px;
-    height: 150px;
-    border: 2px, solid gold;
-    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease, border 0.3s ease;
-    transform: scale(1.2)
-}
-
-/* Implement Hover feature using */
-/* https://github.com/IanLunn/Hover?tab=readme-ov-file#a-copy-and-paste-an-effect */
 
 body {
     background-color: black;
@@ -38,4 +27,56 @@ body {
     display: flex;  /* Enables flexbox */
     justify-content: center;  /* Centers horizontally */
     align-items: center;  
+    animation: pulse 15s infinite ease-in-out;
+    background: linear-gradient(45deg, #1A0E21, #200A16, #0A1E1F, #0B1A17);
+    background-size: 400% 400%;
+    animation: wave 15s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+      background-color: #1A0E21;
+    }
+    25% {
+      background-color: #200A16;
+    }
+    50% {
+        background-color: #0A1E1F;
+    }
+    75% {
+        background-color: #0B1A17;
+    }
+    100% {
+        background-color: #1A0E21;
+    }
+}
+
+@keyframes wave {
+    0% {
+      background-position: 100% 0;
+    }
+    50% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+}
+
+@keyframes floating {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(5px, -10px) rotate(-5deg);
+    }
+    50% {
+      transform: translate(-5px, -20px) rotate(5deg);
+    }
+    75% {
+      transform: translate(5px, -10px) rotate(-5deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
 }
