@@ -1,10 +1,10 @@
 .petal {
     display: inline-block;
     animation: pulse 7s infinite ease-in-out;
-    background: linear-gradient(45deg, #1A0E21, #200A16, #0A1E1F, #0B1A17);
+    background: linear-gradient(45deg, #E6D6FF, #A1D8D9, #FFD1B3, #A3B9D1);
     background-size: 500% 500%;
     animation: wave 15s infinite ease-in-out;
-    border: 2px, solid gold;
+    border: 3px, solid rgb(255, 187, 0);
     width: 100px;
     height: 150px;
     border-radius: 77% 23% 70% 30% / 100% 30% 70% 0% ;
@@ -20,7 +20,7 @@
     color: rgb(153, 116, 21);
 }
 
-body {
+.main {
     background-color: black;
     margin: 0;
     height: 100vh;
@@ -28,27 +28,40 @@ body {
     justify-content: center;  /* Centers horizontally */
     align-items: center;  
     animation: pulse 15s infinite ease-in-out;
-    background: linear-gradient(45deg, #1A0E21, #200A16, #0A1E1F, #0B1A17);
+    background: linear-gradient(45deg, #E6D6FF, #A1D8D9, #FFD1B3, #A3B9D1);
     background-size: 400% 400%;
     animation: wave 15s infinite ease-in-out;
 }
 
+.interval {
+  background-color: black;
+}
+
+.int_p {
+  font-family: Pacifico; 
+  font-size: xx-large; 
+  text-align: center;
+  margin-top: 10%;
+  color: #ffffff;
+}
+
+
 @keyframes pulse {
-    0% {
-      background-color: #1A0E21;
-    }
-    25% {
-      background-color: #200A16;
-    }
-    50% {
-        background-color: #0A1E1F;
-    }
-    75% {
-        background-color: #0B1A17;
-    }
-    100% {
-        background-color: #1A0E21;
-    }
+  0% {
+    background-color: #E6D6FF;
+  }
+  25% {
+    background-color: #A1D8D9;
+  }
+  50% {
+    background-color: #FFD1B3;
+  }
+  75% {
+    background-color: #A3B9D1;
+  }
+  100% {
+    background-color: #E6D6FF;
+  }  
 }
 
 @keyframes wave {

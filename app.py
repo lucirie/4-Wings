@@ -4,6 +4,10 @@ from cs50 import SQL
 app = Flask(__name__)
 
 @app.route("/")
+def fullscreen_prompt():
+    return render_template('fullscreen.html')
+
+@app.route("/home")
 def home():
     return render_template('home.html')
 
