@@ -7,6 +7,10 @@ app = Flask(__name__)
 def fullscreen_prompt():
     return render_template('fullscreen.html')
 
+@app.route("/interval")
+def interval():
+    return render_template('interval.html')
+
 @app.route("/home")
 def home():
     return render_template('home.html')
