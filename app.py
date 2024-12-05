@@ -1,13 +1,10 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 from cs50 import SQL
 
 app = Flask(__name__)
 
-@app.route("/")
-def fullscreen_prompt():
-    return render_template('fullscreen.html')
 
-@app.route("/interval")
+@app.route("/")
 def interval():
     return render_template('interval.html')
 

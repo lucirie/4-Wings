@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
 .petal {
     display: inline-block;
     animation: pulse 7s infinite ease-in-out;
@@ -37,13 +39,51 @@
   background-color: black;
 }
 
-.int_p {
+body{ 
+  background: black;
+  margin: 0;
+  padding: 0;
+  color: #c4c4c4;
+  outline: hidden;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
+}
+
+.int-div {
+  position: relative;
+  width: 83%;
+  height: 175px;
+  margin: 7% auto;
+}
+
+.int-h1 {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  font-size: 45px;
+}
+
+.int-h1:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  line-height: 48px;
+  left: 30%;
+  top: 50%;
+  animation: introduction 25s linear 1;
+  animation-fill-mode: forwards;
+}
+
+
+/* .int_p {
   font-family: Pacifico; 
   font-size: xx-large; 
-  text-align: center;
+  text-align: center;             FAILURE. KEPT AS ARCHIVE. (Pacifico font important)
   margin-top: 10%;
   color: #ffffff;
-}
+} */
 
 
 @keyframes pulse {
