@@ -1,3 +1,14 @@
-<audio src="{{ url_for('static', filename='music/minecraft.mp3') }}" autoplay loop>
-    Your browser doesnt support this music.
-</audio>
+<!DOCTYPE html>
+<html>
+    <body>
+        <audio src="/static/music/minecraft.ogg" controls autoplay muted loop>
+            Your browser does not support the audio element.
+        </audio>
+        <script>
+            addEventListener('click', () => {
+                document.getElementById('background-music').muted = false;
+                document.getElementById('background-music').play();
+            });
+        </script>
+    </body>
+</html>
