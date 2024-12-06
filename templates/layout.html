@@ -10,5 +10,9 @@
         <script src="{{ url_for('static', filename='styles.js') }}"></script>
         <title>4-Wings: {% block title %}{% endblock %}</title>
     </head>
+    <body class="{{ page_class }}">
+        <!-- Music Player: NEEDS DEBUGGING. NOT RUNNING. -->
+        <iframe src="{{ url_for('static', filename='music/music.html') }}" style="border: none; height: 0; width: 0;"></iframe>
         {% block body %}{% endblock %}
+    </body>
 </html>
