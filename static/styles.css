@@ -22,7 +22,7 @@
     color: rgb(153, 116, 21);
 }
 
-.main {
+#main {
     background-color: black;
     margin: 0;
     height: 100vh;
@@ -35,7 +35,7 @@
     animation: wave 15s infinite ease-in-out;
 }
 
-.interval {
+#interval {
   background: black;
   margin: 0;
   padding: 0;
@@ -71,6 +71,19 @@
   animation: introduction 25s linear 1;
   animation-fill-mode: forwards;
 }
+
+html,body{ margin:0; padding:0; height:100%; width:100%; }
+
+.full-size{
+  height:100%;
+  width:100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+}
+
+.hidden {display: none;}
 
 
 /* .int_p {

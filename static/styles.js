@@ -1,3 +1,9 @@
+setTimeout(() => {
+    document.getElementById('interval').classList.add('hidden');
+    document.getElementById('main').classList.remove('hidden');
+}, 25000);
+
+
 // FAILURE. THIS IS KEPT AS ARCHIVE.
 
 // function goFullscreen() {

@@ -10,11 +10,9 @@
         <script src="{{ url_for('static', filename='styles.js') }}"></script>
         <title>4-Wings: {% block title %}{% endblock %}</title>
     </head>
-    <body class="{{ page_class }}">
+    <body>
         <!-- Music Player -->
-        <!-- <iframe src="{{ url_for('static', filename='music/music.html') }}" style="border: none; height: 0; width: 0;"></iframe> -->
         <iframe width="1" height="1" src="https://www.youtube.com/embed/Gpd85y_iTxY?si=rEHvxDJg14kgLaue&autoplay=1&loop=1&playlist=Gpd85y_iTxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <a class="btn btn-outline-light" href="/home">Home</a>
         {% block body %}{% endblock %}
     </body>
 </html>
