@@ -23,12 +23,8 @@
 }
 
 #main {
-    background-color: black;
     margin: 0;
     height: 100vh;
-    display: flex;  /* Enables flexbox */
-    justify-content: center;  /* Centers horizontally */
-    align-items: center;  
     animation: pulse 15s infinite ease-in-out;
     background: linear-gradient(45deg, #E6D6FF, #A1D8D9, #FFD1B3, #A3B9D1);
     background-size: 400% 400%;

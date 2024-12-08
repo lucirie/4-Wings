@@ -8,12 +8,13 @@
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script> <!-- Load Mediapip.js -->
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
-        <script defer src="innovation.js"></script>
+        <script src="{{ url_for('static', filename='innovation.js') }}"></script>
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="innovation.css">
     </head>
-    <body>
-        <h1>Sign Language Detection</h1>
-        <video id="webcam" autoplay playsinline></video> <!-- Webcam feed -->
+    <body id="main">
+        <h1 style="display: block; text-align: center; margin: 10px;">Sign Language Detection</h1>
+        <video id="webcam" autoplay playsinline style="display: block; margin: 0 auto;"></video> <!-- Webcam feed -->
         <div id="prediction"></div> <!-- Show prediction here -->
     </body>
 </html>
