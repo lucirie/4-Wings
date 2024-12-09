@@ -16,3 +16,14 @@ def home():
 def innovation():
     return render_template('innovation.html')
 
+@app.route("/intelligence")
+def intelligence():
+    return render_template('intelligence.html')
+
+@app.route("/wishes")
+def wishes():
+    return render_template('wishes.html')
+
+@app.route('/yourturn')
+def yourturn():
+    return render_template('yourturn.html')

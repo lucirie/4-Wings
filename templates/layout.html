@@ -11,7 +11,7 @@
         <script src="{{ url_for('static', filename='styles.js') }}"></script>
         <title>4-Wings: {% block title %}{% endblock %}</title>
     </head>
-    <body id="body">
+    <body id="main">
         <!-- Music Player -->
         <iframe width="1" height="1" src="https://www.youtube.com/embed/Gpd85y_iTxY?si=rEHvxDJg14kgLaue&autoplay=1&loop=1&playlist=Gpd85y_iTxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         {% block body %}{% endblock %}

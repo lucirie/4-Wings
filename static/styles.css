@@ -6,10 +6,9 @@
     background: linear-gradient(45deg, #E6D6FF, #A1D8D9, #FFD1B3, #A3B9D1);
     background-size: 500% 500%;
     animation: wave 15s infinite ease-in-out;
-    border: 3px, solid rgb(255, 187, 0);
+    border: black;
     width: 100px;
     height: 150px;
-    border-radius: 77% 23% 70% 30% / 100% 30% 70% 0% ;
     color: rgba(0, 0, 0, 0);
     cursor: pointer;
     margin: auto;
@@ -17,10 +16,10 @@
     animation: floating 15s ease-in-out infinite;
 }
 
-.petal:hover {
-    /* Need to add some effects and fonts. */
-    color: rgb(153, 116, 21);
-}
+#p-1:hover { border: 3px, solid #007BFF; }
+#p-2:hover { border: 3px, solid #FFC300; }
+#p-3:hover { border: 3px, solid #28A745; }
+#p-4:hover { border: 3px, solid #8A2BE2; }
 
 #main {
     margin: 0;
@@ -80,6 +79,11 @@ html,body{ margin:0; padding:0; height:100%; width:100%; }
 }
 
 .hidden {display: none;}
+
+#p-1 { float: right; margin-top: 100px; margin-right: 35%; border-radius: 77% 23% 70% 30% / 100% 30% 70% 0%; }
+#p-2 { float: left; margin-top: 100px; margin-left: 35%; border-radius: 23% 77% 30% 70% / 30% 100% 0% 70%; }
+#p-3 { position: absolute; bottom: 0; right: 0; margin-bottom: 100px; margin-right: 35%; border-radius: 30% 70% 23% 77% / 0% 70% 30% 100%; }
+#p-4 { position: absolute; bottom: 0; left: 0; margin-bottom: 100px; margin-left: 35%; border-radius: 70% 30% 77% 23% / 70% 0% 100% 30%; }
 
 
 /* .int_p {
