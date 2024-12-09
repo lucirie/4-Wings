@@ -1,7 +1,12 @@
 setTimeout(fade_out, 28000);
+// setTimeout(Flash(), 25000);        NEEDS WORK.
 
 function fade_out() {
     $("#interval").fadeOut().empty();
+}
+
+function Flash() {
+    $("#body").style.animation='flasher 4s linear';
 }
 
 window.setTimeout(function() {
