@@ -9,7 +9,7 @@ window.onload = async function () {
     canvasElement.style.margin = '0 auto';
     canvasElement.style.border = '2px solid #cccccc';
     canvasElement.style.borderRadius = '10px';
-    canvasElement.style.boxShadow = '5px 5px 15px rgba(0, 0, 0, 0.5)';
+    canvasElement.style.boxShadow = '0px 0px 30px rgba(0, 0, 0, 0.5)';
 
     canvasCtx = canvasElement.getContext('2d');
 
