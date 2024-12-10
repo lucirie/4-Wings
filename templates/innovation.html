@@ -12,9 +12,9 @@
         <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="innovation.css">
     </head>
-    <body id="main">
-        <h1 style="display: block; text-align: center; margin: 10px;">Sign Language Detection</h1>
-        <video id="webcam" autoplay playsinline style="display: block; margin: 0 auto;"></video> <!-- Webcam feed -->
+    <body id="main" style="overflow: hidden;">
+        <h1 style="display: block; text-align: center; margin: 10px;"><span class="shortcut">CTRL + SHIFT + I</span></h1>
+        <video id="webcam" autoplay playsinline style="display: block; margin: 0 auto; width: 640px; height: 480px; border: 1px solid black;"></video> <!-- Webcam feed -->
         <div id="prediction"></div> <!-- Show prediction here -->
     </body>
 </html>

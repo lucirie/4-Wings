@@ -85,6 +85,8 @@ html,body{ margin:0; padding:0; height:100%; width:100%; }
 #p-3 { position: absolute; bottom: 0; right: 0; margin-bottom: 100px; margin-right: 35%; border-radius: 30% 70% 23% 77% / 0% 70% 30% 100%; }
 #p-4 { position: absolute; bottom: 0; left: 0; margin-bottom: 100px; margin-left: 35%; border-radius: 70% 30% 77% 23% / 70% 0% 100% 30%; }
 
+.shortcut { display: inline-block; font-family: 'Courier New', monospace; font-size: 14px; font-weight: bold; color: #333; background-color: #f0f0f0; border: 2px solid #ccc; border-radius: 5px; padding: 5px 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); }
+
 
 /* .int_p {
   font-family: Pacifico; 

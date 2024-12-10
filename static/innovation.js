@@ -4,6 +4,13 @@ window.onload = async function () {
 
     canvasElement = document.createElement('canvas');
     document.body.appendChild(canvasElement);
+
+    canvasElement.style.display = 'block';
+    canvasElement.style.margin = '0 auto';
+    canvasElement.style.border = '2px solid #cccccc';
+    canvasElement.style.borderRadius = '10px';
+    canvasElement.style.boxShadow = '5px 5px 15px rgba(0, 0, 0, 0.5)';
+
     canvasCtx = canvasElement.getContext('2d');
 
     stream = await navigator.mediaDevices.getUserMedia({ video: true })
@@ -24,9 +31,6 @@ window.onload = async function () {
     hands.onResults((results) => {
         canvasCtx.save();
         canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
-
-        // Flip the canvas so it's not upside down
-        canvasElement.style.transform = "rotate(180deg)";
         
         canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
 
