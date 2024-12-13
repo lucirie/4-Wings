@@ -20,9 +20,13 @@ def innovation():
 def intelligence():
     return render_template('intelligence.html')
 
-@app.route("/wishes")
+@app.route("/wishes", methods=['POST', 'GET'])
 def wishes():
-    return render_template('wishes.html')
+    if request.method == 'GET':
+        return render_template('wishes.html')
+    elif request.method == 'POST':
+        input = request.form.get('txt')
+        return render_template('wishes.html', input=input)
 
 @app.route('/yourturn')
 def yourturn():

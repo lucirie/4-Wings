@@ -16,12 +16,26 @@
     <body style="overflow: hidden;">
         <video autoplay muted loop id="video">
             <source src="/static/videos/shower.mp4" type="video/mp4">
+        </video>
             <div class="box">
-                <form name="search">
+                <form name="search" method="POST">
                     <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
                 </form>
                 <i class="fas fa-search"></i>
             </div>
-        </video>
+            <script>
+                const input = document.querySelector('.input');
+                const box = document.querySelector('.box');
+            
+                // Add hover listener
+                box.addEventListener('mouseenter', () => {
+                    input.setAttribute('placeholder', 'i wish..');
+                });
+            
+                // Remove placeholder when hover ends
+                box.addEventListener('mouseleave', () => {
+                    input.removeAttribute('placeholder');
+                });
+            </script>            
     </body>
 </html>
