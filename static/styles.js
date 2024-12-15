@@ -5,13 +5,9 @@ function fade_out() {
     $("#interval").fadeOut().empty();
 }
 
-function Flash() {
-    $("#body").style.animation='flasher 4s linear';
-}
-
 window.setTimeout(function() {
     $("#main").fadeIn().addClass('full-size');
-    $(".petal").fadeIn().removeClass('hidden');
+    $(".petal").fadeIn().addClass('petal');
 }, 28000);
 
 // FAILURE. THIS IS KEPT AS ARCHIVE.

@@ -26,7 +26,7 @@ def wishes():
         return render_template('wishes.html')
     elif request.method == 'POST':
         input = request.form.get('txt')
-        return render_template('wishes.html', input=input)
+        return render_template('wished.html', input=input)
 
 @app.route('/yourturn')
 def yourturn():

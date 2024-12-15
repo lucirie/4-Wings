@@ -17,12 +17,14 @@
         <video autoplay muted loop id="video">
             <source src="/static/videos/shower.mp4" type="video/mp4">
         </video>
-            <div class="box">
-                <form name="search" method="POST">
-                    <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-                </form>
-                <i class="fas fa-search"></i>
-            </div>
+
+        <h1 style="font-family: 'Courier New', monospace; font-size: 36px; animation: txt-pulse 3s infinite; margin-top: 10%; text-align: center;">What Is Your Dream?</h1>
+        <div class="box">
+            <form name="search" method="POST">
+                <input type="text" class="Input" name="txt" onmouseout="this.value = ''; this.blur();">
+            </form>
+        </div>
+
             <script>
                 const input = document.querySelector('.input');
                 const box = document.querySelector('.box');

@@ -126,6 +126,25 @@ html,body{ margin:0; padding:0; height:100%; width:100%; }
   }  
 }
 
+
+@keyframes txt-pulse {
+  0% {
+    color: #E6D6FF;
+  }
+  25% {
+    color: #A1D8D9;
+  }
+  50% {
+    color: #FFD1B3;
+  }
+  75% {
+    color: #A3B9D1;
+  }
+  100% {
+    color: #E6D6FF;
+  }  
+}
+
 @keyframes wave {
     0% {
       background-position: 100% 0;
