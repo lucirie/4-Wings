@@ -1,0 +1,27 @@
+::selection {
+    color: white;
+    background: rgba(56, 0, 56, 0.61);
+}
+
+body {
+    background: linear-gradient(45deg, black, rgb(36, 36, 36),black, rgb(117, 117, 117), rgb(31, 31, 31), black);
+    background-size: 400% 400%;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    animation: waves 15s infinite;
+    color: white;
+}
+
+
+@keyframes waves {
+    0% {
+      background-position: 100% 0;
+    }
+    50% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+}

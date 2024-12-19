@@ -6,7 +6,7 @@ import openai
 
 app = Flask(__name__)
 
-openai.api_key = os.getenv('OPEN_AI_KEY')
+openai.api_key = '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'
 
 def generate_text(prompt):
     try:
