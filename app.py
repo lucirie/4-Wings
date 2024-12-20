@@ -3,10 +3,18 @@ from cs50 import SQL
 import markdown
 import os
 import openai
+import json
+
 
 app = Flask(__name__)
 
-openai.api_key = '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'
+# Load the configuration file
+with open('config.json', 'r') as file:
+    config = json.load(file)
+
+# Get the API key
+api_key = config['OPEN_AI_KEY']
+openai.api_key = api_key
 
 def generate_text(prompt):
     try:
