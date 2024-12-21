@@ -126,6 +126,39 @@
               For when we rage, advice is often seen<br>
               By blunting us to make our wits more keen.<br><br>          
             </p>
-          </div>          
+          </div>  
+          <div id="container" class="hidden container fixed-div">
+            <div class="response">
+
+            </div>
+          </div>
+          <script>
+          function getSelectionTextOnMouseUp() {
+              document.addEventListener("mouseup", async () => {
+              const selectedText = window.getSelection().toString().trim();
+                  if (selectedText) {
+                      const containerElement = document.getElementById('container');
+                      const response = document.getElementById('response')
+                      containerElement.classList.remove('hidden');
+                      reponse.textContent = '';
+
+                      const apiResponse = await fetchOpenAIResponse(selectedText);
+                      response.textContent = apiResponse;
+                  }
+              });
+          }
+
+          // Example function to simulate an API call
+          async function fetchOpenAIResponse(prompt) {
+            console.log(`Prompt sent to OpenAI: "${prompt}"`);
+            // Simulate a delay
+            return new Promise((resolve) => {
+              setTimeout(() => resolve(`Response for: "${prompt}"`), 2000);
+            });
+          }
+  
+          // Call the function to start listening
+          getSelectionTextOnMouseUp();
+          </script>
     </body>
 </html>

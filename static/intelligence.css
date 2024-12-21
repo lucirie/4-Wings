@@ -1,17 +1,39 @@
 ::selection {
     color: white;
-    background: rgba(56, 0, 56, 0.61);
+    background: rgba(107, 0, 107, 0.87);
 }
 
 body {
-    background: linear-gradient(45deg, black, rgb(36, 36, 36),black, rgb(117, 117, 117), rgb(31, 31, 31), black);
+    /* background: linear-gradient(45deg, black, rgb(36, 36, 36), rgb(180, 180, 180)); */
     background-size: 400% 400%;
+    background-color: black;
     margin: 0;
     height: 100vh;
-    overflow: hidden;
-    animation: waves 15s infinite;
+    /* animation: waves 15s infinite; */
     color: white;
 }
+
+.container{
+  background: none;
+  animation: border-pulse 3s infinite, txt-pulse 3s infinite;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+  font-size: 36px;
+}
+
+.fixed-div {
+  position: fixed;  
+  top: 50%;        
+  right: 0;        
+  transform: translateY(-50%); 
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-right: 25px;
+}
+
+.hidden {display: none;}
+
 
 
 @keyframes waves {
@@ -24,4 +46,22 @@ body {
     100% {
       background-position: 100% 0;
     }
+}
+
+@keyframes border-pulse {
+  0% {
+    border: 4px solid #E6D6FF;
+  }
+  25% {
+    border: 4px solid #A1D8D9;
+  }
+  50% {
+    border: 4px solid #FFD1B3;
+  }
+  75% {
+    border: 4px solid #A3B9D1;
+  }
+  100% {
+    border: 4px solid #E6D6FF;
+  }  
 }
