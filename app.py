@@ -4,6 +4,7 @@ import markdown
 import os
 import openai
 import json
+import requests
 
 
 app = Flask(__name__)
@@ -35,6 +36,22 @@ def generate_text(prompt):
         return f"Error: {str(e)}"
 
 
+@app.route('/api/openai', methods=['POST'])
+def openai_proxy():
+    data = request.json
+    prompt = data.get('prompt', '')
+
+    if not prompt:
+        return jsonify({'response': 'Invalid prompt provided.'}), 400
+
+    try:
+        node_response = requests.post('http://localhost:5001/api/openai', json={'prompt': prompt})
+        node_response.raise_for_status()
+        return jsonify({'response': node_response.json().get('response', 'No response provided.')})
+    except requests.RequestException as e:
+        return jsonify({'response': f'Error connecting to Node.js server: {str(e)}'}), 500
+    
+    
 @app.route("/")
 def interval():
     return render_template('interval.html', page_class='interval')

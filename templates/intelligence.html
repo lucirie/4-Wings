@@ -128,8 +128,7 @@
             </p>
           </div>  
           <div id="container" class="hidden container fixed-div">
-            <div class="response">
-
+            <div id="response">
             </div>
           </div>
           <script>
@@ -140,7 +139,6 @@
                       const containerElement = document.getElementById('container');
                       const response = document.getElementById('response')
                       containerElement.classList.remove('hidden');
-                      reponse.textContent = '';
 
                       const apiResponse = await fetchOpenAIResponse(selectedText);
                       response.textContent = apiResponse;
@@ -148,14 +146,29 @@
               });
           }
 
-          // Example function to simulate an API call
+          // API Call
           async function fetchOpenAIResponse(prompt) {
-            console.log(`Prompt sent to OpenAI: "${prompt}"`);
-            // Simulate a delay
-            return new Promise((resolve) => {
-              setTimeout(() => resolve(`Response for: "${prompt}"`), 2000);
-            });
+            try {
+                const response = await fetch('/api/openai', { // Flask route
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ prompt }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch the OpenAI response.');
+                }
+
+                const data = await response.json();
+                return data.response; // Adjust based on your Flask route's return structure
+            } catch (error) {
+                console.error('Error:', error);
+                return 'An error occurred while fetching the response.';
+            }
           }
+
   
           // Call the function to start listening
           getSelectionTextOnMouseUp();
