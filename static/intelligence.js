@@ -1,22 +1,27 @@
-function getSelectionTextOnMouseUp() {
+function getHighlightedText() {
     document.addEventListener("mouseup", async () => {
-    const selectedText = window.getSelection().toString().trim();
+        const selectedText = window.getSelection().toString().trim();
         if (selectedText) {
-            const containerElement = document.getElementById('container');
-            const response = document.getElementById('response')
-            containerElement.classList.remove('hidden');
+            try {
+                const response = await fetch('/intelligence', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ selectedText: selectedText }), // Properly serialize the string
+                });
 
-            const apiResponse = await fetchOpenAIResponse(selectedText);
-            response.textContent = apiResponse;
+                if (response.ok) {
+                    const data = await response.json(); // Assuming Flask returns JSON
+                    console.log('Response from Flask:', data);
+                } else {
+                    console.error('Failed to send data to Flask');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
         }
     });
 }
 
-// API Call
-async function fetchOpenAIResponse(prompt) {
-  // TODO
-}
-
-
-// Call the function to start listening
-getSelectionTextOnMouseUp();
+getHighlightedText();

@@ -34,23 +34,6 @@ def generate_text(prompt):
     except Exception as e:
         # Return the error message as a string
         return f"Error: {str(e)}"
-
-
-@app.route('/api/openai', methods=['POST'])
-def openai_proxy():
-    data = request.json
-    prompt = data.get('prompt', '')
-
-    if not prompt:
-        return jsonify({'response': 'Invalid prompt provided.'}), 400
-
-    try:
-        node_response = requests.post('http://localhost:5001/api/openai', json={'prompt': prompt})
-        node_response.raise_for_status()
-        return jsonify({'response': node_response.json().get('response', 'No response provided.')})
-    except requests.RequestException as e:
-        return jsonify({'response': f'Error connecting to Node.js server: {str(e)}'}), 500
-    
     
 @app.route("/")
 def interval():
@@ -64,9 +47,15 @@ def home():
 def innovation():
     return render_template('innovation.html')
 
-@app.route("/intelligence")
+@app.route("/intelligence", methods=['POST', 'GET'])
 def intelligence():
-    return render_template('intelligence.html')
+    if request.method == 'GET':
+        return render_template('intelligence.html')  # Render the initial page
+    elif request.method == 'POST':
+        data = request.get_json()  # Parse the incoming JSON
+        selected_text = data.get('selectedText')  # Extract the selected text
+        # Pass the selected text to the new template as a context variable
+        return render_template('yourturn.html', selected_text=selected_text)
 
 @app.route("/wishes", methods=['POST', 'GET'])
 def wishes():
