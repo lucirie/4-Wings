@@ -1,27 +1,22 @@
 function getHighlightedText() {
-    document.addEventListener("mouseup", async () => {
+    document.addEventListener("mouseup", () => {
         const selectedText = window.getSelection().toString().trim();
         if (selectedText) {
-            try {
-                const response = await fetch('/intelligence', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ selectedText: selectedText }), // Properly serialize the string
-                });
-
-                if (response.ok) {
-                    const data = await response.json(); // Assuming Flask returns JSON
-                    console.log('Response from Flask:', data);
-                } else {
-                    console.error('Failed to send data to Flask');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-            }
+            // Create and submit a form to POST the data
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '/intelligence';
+    
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'selectedText';
+            input.value = selectedText;
+    
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
         }
-    });
+    });    
 }
 
 getHighlightedText();

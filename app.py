@@ -52,9 +52,7 @@ def intelligence():
     if request.method == 'GET':
         return render_template('intelligence.html')  # Render the initial page
     elif request.method == 'POST':
-        data = request.get_json()  # Parse the incoming JSON
-        selected_text = data.get('selectedText')  # Extract the selected text
-        # Pass the selected text to the new template as a context variable
+        selected_text = request.form.get('selectedText')
         return render_template('yourturn.html', selected_text=selected_text)
 
 @app.route("/wishes", methods=['POST', 'GET'])
