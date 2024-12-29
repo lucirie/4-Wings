@@ -34,6 +34,22 @@ def generate_text(prompt):
     except Exception as e:
         # Return the error message as a string
         return f"Error: {str(e)}"
+
+def generate_explanation(prompt):
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",  # Chat model
+            messages=[
+                {"role": "system", "content": "You are an AI that translates words from the poem: A Lover's Complaint by William Shakespeare into readable text explanations. Any input you get WILL be from that peom, so you must simply reply with a detailed explanation"},
+                {"role": "user", "content": prompt}
+            ],
+        )
+        raw_text = response.choices[0].message["content"].strip()
+        formatted_text = markdown.markdown(raw_text)
+        return formatted_text
+    except Exception as e:
+        # Return the error message as a string
+        return f"Error: {str(e)}"
     
 @app.route("/")
 def interval():
@@ -53,7 +69,8 @@ def intelligence():
         return render_template('intelligence.html')  # Render the initial page
     elif request.method == 'POST':
         selected_text = request.form.get('selectedText')
-        return render_template('yourturn.html', selected_text=selected_text)
+        explanation = generate_explanation(selected_text)
+        return render_template('intel.html', explanation=explanation, selected_text=selected_text)
 
 @app.route("/wishes", methods=['POST', 'GET'])
 def wishes():
