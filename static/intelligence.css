@@ -4,12 +4,12 @@
 }
 
 body {
-    /* background: linear-gradient(45deg, black, rgb(36, 36, 36), rgb(180, 180, 180)); */
+    background: linear-gradient(45deg, black, rgb(36, 36, 36), rgb(23, 23, 23));
     background-size: 400% 400%;
     background-color: black;
     margin: 0;
     height: 100vh;
-    /* animation: waves 15s infinite; */
+    animation: waves 15s infinite;
     color: white;
 }
 

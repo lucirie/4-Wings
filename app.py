@@ -45,8 +45,7 @@ def generate_explanation(prompt):
             ],
         )
         raw_text = response.choices[0].message["content"].strip()
-        formatted_text = markdown.markdown(raw_text)
-        return formatted_text
+        return raw_text
     except Exception as e:
         # Return the error message as a string
         return f"Error: {str(e)}"

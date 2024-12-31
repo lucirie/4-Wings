@@ -30,9 +30,9 @@ body {
   overflow-wrap: break-word;
 }
 
-.one {opacity: 0; animation: fadeIn ease-in-out 3s;}
+.one {animation: fadeIn ease-in-out 3s;}
 
-.two {opacity: 0; animation: fadeIn ease-in-out 6s;}
+.two {animation: fadeIn ease-in-out 15s;}
 
 .title {
   margin-bottom: 20px;

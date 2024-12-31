@@ -7,7 +7,6 @@ function fade_out() {
 
 window.setTimeout(function() {
     $("#main").fadeIn().addClass('full-size');
-    $(".petal").fadeIn().addClass('petal');
 }, 28000);
 
 // FAILURE. THIS IS KEPT AS ARCHIVE.
