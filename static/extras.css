@@ -1,6 +1,4 @@
-
 @keyframes introduction {
-  
     0% {
       content: "C";
     }
@@ -115,23 +113,19 @@
       content: "it's an";
     }
     33% {
-      content: "it's an aR";
+      content: "it's an ar";
     }
     34% {
-      /* your styles here */
-      content: "it's an arT";
+      content: "it's an art";
     }
     35% {
-      /* your styles here */
-      content: "it's an Art.";
+      content: "it's an art.";
     }
     36% {
-      /* your styles here */
-      content: "it's an Art.";
+      content: "it's an art.";
     }
     37% {
-      /* your styles here */
-      content: "it's an aRt.";
+      content: "it's an art.";
     }
     38% {
       content: "it's an art.";
@@ -146,10 +140,10 @@
       content: "it's an art.";
     }
     42% {
-      content: "it's an arT";
+      content: "it's an art";
     }
     43% {
-      content: "it's an aR";
+      content: "it's an ar";
     }
     44% {
       content: "it's an";
@@ -203,31 +197,31 @@
       content: "W";
     }
     61% {
-      content: "WhE";
+      content: "Whe";
     }
     62% {
-      content: "wheR";
+      content: "wher";
     }
     63% {
-      content: "wHere";
+      content: "where";
     }
     64% {
-      content: "Where A";
+      content: "Where a";
     }
     65% {
-      content: "Where Ar";
+      content: "Where ar";
     }
     66% {
-      content: "Where aRe";
+      content: "Where are";
     }
     67% {
-      content: "Where arE T";
+      content: "Where are t";
     }
     68% {
-      content: "Where are tH";
+      content: "Where are th";
     }
     69% {
-      content: "Where are thE";
+      content: "Where are the";
     }
     70% {
       content: "Where are the.";
@@ -254,31 +248,31 @@
       content: "Where are the.. WINGS";
     }
     78% {
-      content: "Where are the.. WINgS?!";
+      content: "Where are the.. WINGS?";
     }
     79% {
-      content: "Where are the.. WinGS?!1?";
+      content: "Where are the.. WINGS?";
     }
     80% {
-      content: "Where are the.. Wings?!";
+      content: "Where are the.. WINGS?";
     }
     81% {
-      content: "Where are the.. wings?";
+      content: "Where are the.. WINGS?";
     }
     82% {
-      content: "Where are the.. WINGS?!";
+      content: "Where are the.. WINGS?";
     }
     83% {
-      content: "Where are the.. wings?";
+      content: "Where are the.. WINGS?";
     }
     84% {
-      content: "Where are the.. WINGS?!";
+      content: "Where are the.. WINGS?";
     }
     85% {
-      content: "Where are the.. wings?";
+      content: "Where are the.. WINGS?";
     }
     86% {
-      content: "Where are the. wings?";
+      content: "Where are the. wiNGS?";
     }
     87% {
       content: "Where are the wings?";
@@ -323,4 +317,15 @@
       /* your styles here */
     }
   }  
- 
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}

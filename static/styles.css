@@ -145,6 +145,25 @@ html,body{ margin:0; padding:0; height:100%; width:100%; }
   }  
 }
 
+@keyframes darker-txt-pulse {
+  0% {
+    color: #4B3F72;
+  }
+  25% {
+    color: #3C6667;
+  }
+  50% {
+    color: #9F6A3B;
+  }
+  75% {
+    color: #5C6A7E;
+  }
+  100% {
+    color: #4B3F72;
+  }  
+}
+
+
 @keyframes wave {
     0% {
       background-position: 100% 0;
