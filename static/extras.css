@@ -329,3 +329,27 @@
     opacity: 0;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes petal-pulse {
+  0% {
+    border: 3px, solid #007BFF;
+  }
+  25% {
+    border: 3px, solid #FFC300;
+  }
+  50% {
+    border: 3px, solid #28A745;
+  }
+  75% {
+    border: 3px, solid #8A2BE2;
+  }
+}
