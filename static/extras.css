@@ -338,18 +338,50 @@
     opacity: 1;
   }
 }
-
+ 
 @keyframes petal-pulse {
   0% {
     border: 3px, solid #007BFF;
   }
-  25% {
+  33% {
     border: 3px, solid #FFC300;
   }
-  50% {
+  70% {
     border: 3px, solid #28A745;
   }
-  75% {
+  100% {
     border: 3px, solid #8A2BE2;
   }
+}
+
+
+.arrow-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.arrow-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.arrow-button::after {
+  content: '→';
+  margin-left: 8px;
+  font-weight: bold;
 }

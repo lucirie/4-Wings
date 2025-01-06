@@ -7,6 +7,19 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
         <link rel="stylesheet" href="{{ url_for('static', filename='extras.css') }}">
         <style>
+            .final_petal {
+                opacity: 0;
+                display: inline-block;
+                background: linear-gradient(45deg, #E6D6FF, #A1D8D9, #FFD1B3, #A3B9D1);
+                background-size: 500% 500%;
+                border: black;
+                width: 100px;
+                height: 150px;
+                cursor: pointer;
+                margin: auto;
+                transition: transform 0.5s ease-out, opacity 0.5s;
+                animation: fadeIn 5s ease-in 65s forwards, floating 15s ease-in-out infinite, petal-pulse 5s infinite;
+            }
             body, html {
                 height: 100%;
                 margin: 0;
@@ -32,7 +45,7 @@
             }
         </style>
     </head>
-    <iframe width="1" height="1" src="https://www.youtube.com/embed/kF9-t912-hU?si=_lDHhYixHLqblOd5&autoplay=1&loop=1&playlist=kF9-t912-hU&start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="1" height="1" src="https://www.youtube.com/embed/kF9-t912-hU?si=_lDHhYixHLqblOd5&autoplay=1&loop=1&playlist=kF9-t912-hU&start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     <body id="main">
         <div class="centered-div">
@@ -42,7 +55,7 @@
             <h1 style="opacity: 0; animation: fade-in 9s ease-in, darker-txt-pulse 15s infinite; animation-delay: 33s;">The 4 Wings of Computer Science</h1>
             <h1 style="opacity: 0; animation: fade-in 10s ease-in, darker-txt-pulse 15s infinite; animation-delay: 42s;">But what about you?</h1>
             <h1 style="opacity: 0; animation: fade-in 10s ease-in, darker-txt-pulse 15s infinite; animation-delay: 55s;">When will it be Your Turn?</h1>
-            <a class="final-petal" href="https://cs50.harvard.edu/x/2025/" style="display: inline-block; animation: fadeIn 5s ease-in-out 108s, wave 15s infinite ease-in-out, petal-pulse 5s infinite, floating 15s ease-in-out infinite; background: linear-gradient(45deg, #E6D6FF, #A1D8D9, #FFD1B3, #A3B9D1); background-size: 500% 500%; width: 100px; height: 150px; color: rgba(0, 0, 0, 0); cursor: pointer; margin: auto; opacity: 0; transition: transform 0.5s ease-out; border-radius: 77% 23% 70% 30% / 100% 30% 70% 0%; animation-delay: 107s;"></a>
+            <a href="https://cs50.harvard.edu/x/2025/" style="opacity: 0; display: inline-block; border-radius: 77% 23% 70% 30% / 100% 30% 70% 0%; background: linear-gradient(45deg, #E6D6FF, #A1D8D9, #FFD1B3, #A3B9D1); background-size: 500% 500%; border: black; width: 100px; height: 150px; cursor: pointer; margin: auto; transition: transform 0.5s ease-out, opacity 0.5s; animation: fadeIn 5s ease-in 67s forwards, floating 15s ease-in-out infinite, petal-pulse 5s infinite;"  target="_blank"></a>
         </div>
     </body>
 </html>
