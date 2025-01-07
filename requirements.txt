@@ -1,0 +1,5 @@
+flask==2.3.3
+cs50==4.1.0
+markdown==3.4.4
+openai==0.27.8
+requests==2.31.0
