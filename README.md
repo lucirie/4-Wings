@@ -1,6 +1,7 @@
 # 4 Wings of Computer Science
 
-#### Description:
+#### This is a project made with passion (✿◠‿◠)
+#### Made for my CS50x Final Project
 
 # 4-Wings  
 
