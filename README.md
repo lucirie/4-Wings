@@ -1,11 +1,10 @@
 # 4 Wings of Computer Science
 
-#### Video Demo: https://youtu.be/UXZoHQYz_Bo
 #### Description:
 
-# Four Wings  
+# 4-Wings  
 
-Four Wings is a web-based application that demonstrates the versatility of computer science by highlighting its four key pillars: **Innovation**, **Wishes**, **Intelligence**, and **Your Turn**. Each "wing" represents a unique aspect of how computer science can impact and improve the world. This project was built as part of my final submission for CS50x and showcases the skills I acquired during the course.  
+4-Wings is a web-based application that demonstrates the versatility of computer science by highlighting its four key pillars: **Innovation**, **Wishes**, **Intelligence**, and **Your Turn**. Each "wing" represents a unique aspect of how computer science can impact and improve the world. This project was built as part of my final submission for CS50x and showcases the skills I acquired during the course.  
 
 The website leverages Flask as its framework, combined with advanced APIs and frontend technologies like JavaScript and CSS, to create an engaging, aesthetic, and interactive experience. Below is an in-depth look at each wing and the technologies that power them.
 
